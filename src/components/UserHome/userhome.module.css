@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+.userSection {
+    display: flex;
+    background-color: rgb(41, 41, 41);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+.servers {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(65, 65, 65);
+    height: 100vh;
+    align-items: center;
+    padding: 5px;
+}
+
+.servers a {
+    padding: 5px;
+    margin: 5px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.servers a::after {
+    content: '';
+    width: 5px;
+    height: 30%;
+    background-color: aliceblue;
+    position: absolute;
+    top: 30%;
+    left: -10px;
+    transition: all .5s ease;
+    border-radius: 50%;
+}
+
+.servers a:hover::after {
+    height: 60%;
+    top: 20%;
+}
+
+.servers a img {
+    width: 90%;
+}
+
+.servers :nth-child(1){
+    background: url('https://img.freepik.com/free-vector/modern-badge-discord-icon_578229-169.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.servers :nth-child(2){
+    background: url('https://1.bp.blogspot.com/-l-rMrW2JSkg/WodHpsMgYzI/AAAAAAAACa0/bSvAkiGfCxAgolIF_Sy7rNPisnD-Kz5xgCLcBGAs/s1600/%25D8%25AC%25D8%25A7%25D9%2581%25D8%25A7.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.rightSide {
+    flex: 1;
+}

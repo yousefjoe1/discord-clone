@@ -1,0 +1,173 @@
+.firstpage_section {
+    display: flex;
+    overflow: hidden;
+}
+
+.left_nav a {
+    text-decoration: none;
+}
+
+.left_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(48, 48, 48);
+    height: 100vh;
+    padding: 5px;
+    width: 300px;
+}
+
+.left_nav button {
+    border: 2px solid black;
+    width: 90%;
+    background-color: rgb(72, 72, 72);
+    border-radius: 5px;
+    color: darkgrey;
+}
+
+.left_nav a {
+    margin: 10px;
+    width: 90%;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 19px;
+}
+
+.left_nav a:hover {
+    background-color: black;
+}
+
+
+
+.direct_msg {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.icon {
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.iconDiv::before {
+    content: 'Create DM';
+    position: absolute;
+    top: -20px;
+    right: 1px;
+    background-color: rgb(62, 61, 61);
+    color: aliceblue;
+    display: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.iconDiv:hover::before {
+    display: block;
+}
+
+/* -------------------------- right nav */
+
+.firsPage_right_nav {
+    /* background-color: aliceblue; */
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    /* justify-content: space-around; */
+    flex-direction: column;
+}
+
+.right_nav_header {
+    background-color: rgb(62, 61, 61);
+    color: aliceblue;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftNav {
+    display: flex;
+    align-items: center;
+}
+
+.leftNav a {
+    margin: 0 15px;
+    color: darkgray;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.leftNav a:hover {
+    background-color: rgb(95, 95, 95);
+}
+
+
+
+
+
+/*---------------------------------- Right Nav */
+
+.rightNav button {
+    margin: 0 15px;
+    background-color: transparent;
+    border: none;
+    color: azure;
+    position: relative;
+}
+
+.addGrp::before {
+    content: 'New Group DM';
+    position: absolute;
+    top: -5px;
+    left: -80px;
+    color: aliceblue;
+    /* width: 100%; */
+    font-size: 12px;
+    font-weight: 500;
+    display: none;
+    background-color: rgb(96, 96, 96)
+}
+
+.addGrp:hover::before {
+    display: block;
+}
+
+.inbox::before {
+    content: 'Inbox';
+    position: absolute;
+    top: -5px;
+    left: -35px;
+    color: aliceblue;
+    /* width: 100%; */
+    font-size: 14px;
+    font-weight: 500;
+    display: none;
+    background-color: rgb(96, 96, 96);
+    padding: 2px;
+}
+
+.inbox:hover::before {
+    display: block;
+}
+
+.help:before {
+    content: 'Help';
+    position: absolute;
+    bottom: -5px;
+    left: -30px;
+    color: aliceblue;
+    /* width: 100%; */
+    font-size: 14px;
+    font-weight: 500;
+    display: none;
+    background-color: rgb(96, 96, 96);
+
+}
+
+.help:hover::before {
+    display: block;
+}

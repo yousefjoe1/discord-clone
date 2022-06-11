@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.container-fluid{
+.app{
   background: url('https://i.insider.com/617c8e7c1037b10018151217?width=700') no-repeat;
   background-position: center;
   background-size: cover;
@@ -20,7 +20,7 @@ code {
 }
 
 @media (max-width: 500px){
-  .container-fluid {
+  .app {
     background-position: top 25% right 25%;
   }
 }
