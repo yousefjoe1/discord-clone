@@ -1,0 +1,13 @@
+/* .App {
+    font-family: Roboto Mono;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    background: url('https://cdn.mos.cms.futurecdn.net/my8AUCgUhKERqBBwdPQuXG-1200-80.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}

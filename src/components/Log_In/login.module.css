@@ -1,0 +1,53 @@
+.login_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+
+.loginDiv {
+    display: flex;
+    width: 700px;
+    height: 450px;
+    background-color: rgb(53, 53, 53);
+    border-radius: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: lightgray;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.form button {
+    width: 100%;
+}
+
+.form input {
+    width: 100%;
+    background-color: rgb(48, 46, 46);
+    outline: none;
+    border: none;
+    padding: 10px;
+    color: aliceblue;
+}
+
+.withQR {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 50%;
+    color: aliceblue;
+}
+
+.withQR img {
+    width: 200px;
+}
