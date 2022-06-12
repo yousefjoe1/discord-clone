@@ -77,7 +77,6 @@
     padding: 5px;
     font-size: 20px;
     border: none;
-    /* background-color: transparent; */
     color: aliceblue;
     cursor: pointer;
     margin: 10px 0;
@@ -148,7 +147,6 @@
 }
 
 .modal_container {
-    /* background-color: blue; */
     transition: all 1s ease;
 }
 
@@ -157,7 +155,6 @@
     flex-direction: column;
     height: 400px;
     overflow: scroll;
-    /* align-items: flex-start; */
 }
 
 .modal_links a {
@@ -173,7 +170,6 @@
 }
 
 ::-webkit-scrollbar {
-    /* width: 10px; */
     background-color: black;
     height: 1px;
 } 

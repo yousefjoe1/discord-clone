@@ -248,7 +248,7 @@
 .bottom_user_state .user_state {
     width: 50px;
     height: 50px;
-    background: url('https://www.thelostgamer.com/wp-content/uploads/2022/03/Discord-Canary.jpg') no-repeat;
+    background: url('https://umanime.club/img/UMAnime_discord.png') no-repeat;
     background-position: center;
     background-size: cover;
     border-radius: 50%;
@@ -298,7 +298,7 @@
     color: aliceblue;
 }
 
-.bottom_user_state .user_state_menu {
+.bottom_user_state .sittings {
     border: none;
     margin: 5px;
     outline: none;
@@ -308,7 +308,15 @@
     border-radius: 50%;
 }
 
-.bottom_user_state .user_state_menu:hover {
+.bottom_user_state .sittings:hover {
     background-color: rgb(74, 74, 74);
     color: aliceblue;
+}
+
+.bottom_user_state .menu button{
+    background-color: rgb(67, 67, 67);
+    color: white;
+    padding: 5px;
+    border: none;
+
 }

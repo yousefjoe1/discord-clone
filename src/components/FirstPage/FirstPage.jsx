@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 
+import "./userstateStyle.css";
+
 import { RiDashboard3Line } from "react-icons/ri";
 import { IoAccessibilitySharp } from "react-icons/io5";
 import { IoAddOutline } from "react-icons/io5";
@@ -8,32 +10,55 @@ import { FiUserPlus } from "react-icons/fi";
 import { FiFolder } from "react-icons/fi";
 import { GoIssueOpened } from "react-icons/go";
 import { HiDotsVertical } from "react-icons/hi";
+import { IoIosRadioButtonOff } from "react-icons/io";
 
 import { BsMicFill, BsMicMuteFill } from "react-icons/bs";
 import { IoVolumeMedium, IoVolumeMute } from "react-icons/io5";
+import { WiMoonWaxingCrescent4 } from "react-icons/wi";
+import { FcCancel } from "react-icons/fc";
+import { SiCanonical } from "react-icons/si";
 
 import st from "./firstpage.module.css";
 
 const FirstPage = () => {
   const [addgrp, setAddgrp] = useState(false);
 
+  const [bigCircl, setBigCircl] = useState("");
+  const [smallCircl, setSmallCircl] = useState("");
+
   const [mike, setMike] = useState(false);
   const [speaker, setSpeaker] = useState(false);
+
+  const [menuTrue, setMenuTrue] = useState(true);
 
   const addGroubMd = () => {
     setAddgrp(!addgrp);
   };
 
-  const muteFunc = () => {
-    setMike(!mike);
-  };
-
-  const speakerFunc = () => {
-    setSpeaker(!speaker);
-  };
-
   const userStateMenu = () => {
     console.log("user menu");
+  };
+
+  const userStateFunc = (state) => {
+    if (state == "online") {
+      setBigCircl("");
+      setSmallCircl("");
+    }
+
+    if (state == "idle") {
+      setBigCircl("idl_big_circl");
+      setSmallCircl("idl_small_circl");
+    }
+
+    if (state == "disturb") {
+      setBigCircl("disturb_big_Circl");
+      setSmallCircl("disturb_small_Circl");
+    }
+
+    if (state == "invisible") {
+      setBigCircl("invisible_big_Circl");
+      setSmallCircl("invisible_small_Circl");
+    }
   };
 
   return (
@@ -57,16 +82,50 @@ const FirstPage = () => {
         </div>
 
         <div className={st.bottom_user_state}>
-          <button className={st.user_state}></button>
+          {menuTrue && (
+            <div className={`${st.menu} menu`}>
+              <button
+                onClick={() => userStateFunc("online")}
+                className="online"
+              >
+                Online <IoIosRadioButtonOff className="online-icon" />
+              </button>
+              <button onClick={() => userStateFunc("idle")} className="idle">
+                Idle <WiMoonWaxingCrescent4 className="idle-icon" />
+              </button>
+              <button
+                onClick={() => userStateFunc("disturb")}
+                className="disturb"
+              >
+                Do Not Disturb <FcCancel className="disturb-icon" />
+              </button>
+              <button
+                onClick={() => userStateFunc("invisible")}
+                className="invisiblestate"
+              >
+                Invisible <SiCanonical className="invisible-icon" />
+              </button>
+            </div>
+          )}
+          <button
+            onClick={() => setMenuTrue(!menuTrue)}
+            className={st.user_state}
+          >
+            <div className={`big_circl ${bigCircl} `}>
+              <div className={`small_circl ${smallCircl} `}></div>
+            </div>
+          </button>
+
           <button className={st.user_name}>Youssef Mahmoud</button>
+
           <div className={st.user_icons}>
-            <button onClick={muteFunc} className={st.mike_icon}>
+            <button onClick={() => setMike(!mike)} className={st.mike_icon}>
               {mike ? <BsMicFill /> : <BsMicMuteFill />}
             </button>
-            <button onClick={speakerFunc} className={st.speaker}>
+            <button onClick={() => setSpeaker(!speaker)} className={st.speaker}>
               {speaker ? <IoVolumeMedium /> : <IoVolumeMute />}
             </button>
-            <button onClick={userStateMenu} className={st.user_state_menu}>
+            <button onClick={userStateMenu} className={st.sittings}>
               <HiDotsVertical />
             </button>
           </div>

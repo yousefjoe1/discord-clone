@@ -1,0 +1,91 @@
+.big_circl {
+    position: relative;
+    top: -10px;
+    right: -36px;
+    width: 17px;
+    height: 17px;
+    background-color: black;
+    border-radius: 50%;
+    transition: all .5s ease;
+    overflow: hidden;
+}
+
+.small_circl {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 10px;
+    height: 10px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+.menu {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(77, 77, 77);
+    color: aliceblue;
+    top: -205px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.online-icon {
+    background-color:greenyellow;
+    border-radius: 50%;
+}
+
+.idle-icon {
+    background-color:orange; ;
+    border-radius: 50%;
+    font-size: 19px;
+    transform: rotateZ(20deg);
+}
+
+.invisible-icon {
+    color: gray;
+}
+
+
+.online_big_circl {
+    background-color: black;
+}
+.online_small_circl {
+    background-color: greenyellow;
+}
+
+
+.idl_big_circl {
+    background-color: orange;
+}
+.idl_small_circl {
+    transform: translateX(-6px)  translateY(-5px);
+    background-color: black;
+    width: 13px;
+    height: 13px;
+}
+
+
+.disturb_big_Circl {
+    background-color: red;
+}
+.disturb_small_Circl {
+    width: 12px;
+    height: 4px;
+    background-color: black;
+    transform: translateY(3px);
+}
+
+.invisible_big_Circl {
+    background-color: gray;
+}
+
+.invisible_small_Circl {
+    background-color: rgb(69, 69, 69);
+    width: 9px;
+    height: 9px;
+}
