@@ -40,9 +40,9 @@ const FirstPage = () => {
             </div>
             <Link to={"/user/home/online"}>Online</Link>
             <Link to={"/user/home/all"}>All</Link>
-            <Link to={"/user/home/pending"}>Pending</Link>
-            <Link to={"/user/home/Blocked"}>Blocked</Link>
-            <Link to={"/user/home/addfriend"}>Add Friend</Link>
+            <Link to={"/user/home/pend"}>Pending</Link>
+            <Link to={"/user/home/blocked"}>Blocked</Link>
+            <Link to={"/user/home/friends/"}>Add Friend</Link>
           </div>
           {/* ----------------- Right Nav */}
           <div className={st.rightNav}>

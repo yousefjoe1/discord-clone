@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Input from "../ReuseComp/Input";
 
 import Header from "../Header/Header";
@@ -7,8 +7,10 @@ import Header from "../Header/Header";
 import st from "./register.module.css";
 
 const Register = () => {
+  const navigate = useNavigate();
   const hdSubmit = (e) => {
     e.preventDefault();
+    navigate("/user/home/friends");
   };
 
   return (

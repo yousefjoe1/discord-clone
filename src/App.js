@@ -8,6 +8,7 @@ import ServerOne from './components/ServerOne/ServerOne';
 import UserHome from './components/UserHome/UserHome';
 import Friends from './components/InnerUserPages/Friends/Friends';
 import Nitro from './components/InnerUserPages/Nitro/Nitro';
+import Demo from './components/InnerUserPages/DemoNav/Demo';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
 
             <Route path='friends' element={<Friends />} />
             <Route path='nitro' element={<Nitro />} />
+            <Route path=':id' element={<Demo />} />
           </Route>
           <Route path='server1' element={<ServerOne />} />
         </Route>

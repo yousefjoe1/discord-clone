@@ -10,8 +10,7 @@ const LogIn = () => {
   const navigate = useNavigate();
   const hdSubmit = (e) => {
     e.preventDefault();
-    console.log("login");
-    navigate("/user/home");
+    navigate("/user/home/friends");
   };
 
   return (
