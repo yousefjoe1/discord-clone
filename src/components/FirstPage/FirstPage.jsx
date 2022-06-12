@@ -11,7 +11,7 @@ import { FiFolder } from "react-icons/fi";
 import { GoIssueOpened } from "react-icons/go";
 import { HiDotsVertical } from "react-icons/hi";
 import { IoIosRadioButtonOff } from "react-icons/io";
-
+import { SiAcclaim } from "react-icons/si";
 import { BsMicFill, BsMicMuteFill } from "react-icons/bs";
 import { IoVolumeMedium, IoVolumeMute } from "react-icons/io5";
 import { WiMoonWaxingCrescent4 } from "react-icons/wi";
@@ -29,7 +29,7 @@ const FirstPage = () => {
   const [mike, setMike] = useState(false);
   const [speaker, setSpeaker] = useState(false);
 
-  const [menuTrue, setMenuTrue] = useState(true);
+  const [menuTrue, setMenuTrue] = useState(false);
 
   const addGroubMd = () => {
     setAddgrp(!addgrp);
@@ -82,8 +82,17 @@ const FirstPage = () => {
         </div>
 
         <div className={st.bottom_user_state}>
+          <span className={st.openMenu} onClick={() => setMenuTrue(true)}>
+            <SiAcclaim />
+          </span>
           {menuTrue && (
             <div className={`${st.menu} menu`}>
+              <button
+                className={st.closeMenu}
+                onClick={() => setMenuTrue(false)}
+              >
+                X
+              </button>
               <button
                 onClick={() => userStateFunc("online")}
                 className="online"

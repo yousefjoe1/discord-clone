@@ -320,3 +320,36 @@
     border: none;
 
 }
+
+.menu .closeMenu {
+    position: absolute;
+    top: -13px;
+    right: -16px;
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid white!important; */
+    border-radius: 50%;
+}
+
+.bottom_user_state .openMenu {
+    position: absolute;
+    top: -9px;
+    left: 30px;
+    color: aliceblue;
+    cursor: pointer;
+    animation-name: arrowMenu;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+@keyframes arrowMenu {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

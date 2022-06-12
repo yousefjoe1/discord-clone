@@ -1,11 +1,10 @@
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
-
-import { FiArrowDownCircle } from "react-icons/fi";
+import { Link, useNavigate } from "react-router-dom";
 
 import st from "./header.module.css";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className={`${st.header}`}>
       {/* <div className={st.nav_icon}>
@@ -18,12 +17,12 @@ const Header = () => {
         />
       </Link>
       <div className={st.links}>
-        <button>Downlaod</button>
-        <button>Nitro</button>
-        <button>Safety</button>
-        <button>Support</button>
-        <button>Blog</button>
-        <button>Careers</button>
+        <button onClick={() => navigate("/login")}>Downlaod</button>
+        <button onClick={() => navigate("/login")}>Nitro</button>
+        <button onClick={() => navigate("/login")}>Safety</button>
+        <button onClick={() => navigate("/login")}>Support</button>
+        <button onClick={() => navigate("/login")}>Blog</button>
+        <button onClick={() => navigate("/login")}>Careers</button>
       </div>
       <div className={st.log_reg_links}>
         <Link to={"/login"}>LogIn</Link>
