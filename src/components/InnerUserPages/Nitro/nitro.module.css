@@ -59,9 +59,19 @@
 
 
 ::-webkit-scrollbar{
-width: 0px;
+width: 18px;
+background-color: aliceblue;
 }
 
+::-webkit-scrollbar-track {
+    background-color: rgb(33, 210, 27);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: aliceblue;
+    border-radius: 20px;
+    border: 2px solid black
+}
 
 .upgNitro {
     text-align: center;

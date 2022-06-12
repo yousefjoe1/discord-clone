@@ -29,6 +29,7 @@
     width: 50px;
     height: 50px;
     position: relative;
+    transition: all .5s ease;
 }
 
 .servers a::after {
@@ -44,8 +45,12 @@
 }
 
 .servers a:hover::after {
-    height: 60%;
+    height: 70%;
     top: 20%;
+}
+
+.servers a:hover {
+    border-radius: 30%;
 }
 
 .servers a img {
@@ -72,7 +77,7 @@
     padding: 5px;
     font-size: 20px;
     border: none;
-    background-color: transparent;
+    /* background-color: transparent; */
     color: aliceblue;
     cursor: pointer;
     margin: 10px 0;
@@ -85,6 +90,12 @@
     background-color: lightslategray;
     transition: all .5s ease;
     position: relative;
+    z-index: 100;
+}
+
+.addserver:focus {
+    outline: none;
+    border: none;
 }
 
 .addserver:hover {
@@ -122,4 +133,51 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 19px;
+}
+
+.home:hover {
+    text-decoration: none;
+    color: beige;
+}
+
+
+/* Modal */
+.innermodal {
+    text-align: center  ;
+}
+
+.modal_container {
+    /* background-color: blue; */
+    transition: all 1s ease;
+}
+
+.modal_links {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    overflow: scroll;
+    /* align-items: flex-start; */
+}
+
+.modal_links a {
+    text-decoration: none;
+    font-size: 19px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    /* width: 10px; */
+    background-color: black;
+    height: 1px;
+} 
+
+.modal_links a img {
+    width: 50px;
 }
